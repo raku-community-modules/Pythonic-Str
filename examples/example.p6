@@ -3,7 +3,5 @@ use lib <lib ../lib>;
 
 use Pythonic::Str;
 
-say 'foobar'[3];            # b
-say 'foobar'[3..*];         # bar
-say 'foobar'[^3];           # foo
-say 'foobar'[3,5,6]:exists; # (True True False)
+say 'foobar'[^3]:p;           # (0 => f 1 => o 2 => o)
+say 'foobar'[0, 1, 2]:exists; # (True True True)
