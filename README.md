@@ -41,6 +41,7 @@ characters for stuff like:
 ```perl6
     say 'foobar'[^3]:p;           # (0 => f 1 => o 2 => o)
     say 'foobar'[0, 1, 2]:exists; # (True True True)
+    say WHAT 'foobar'[1]:delete;  # (Failure)
 ```
 
 # LIMITATIONS
