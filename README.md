@@ -46,12 +46,12 @@ them as lists of characters—simply call
 #### REPOSITORY
 
 Fork this module on GitHub:
-https://github.com/zoffixznet/perl6-WWW
+https://github.com/zoffixznet/perl6-Pythonic-Str
 
 #### BUGS
 
 To report bugs or request features, please use
-https://github.com/zoffixznet/perl6-WWW/issues
+https://github.com/zoffixznet/perl6-Pythonic-Str/issues
 
 #### AUTHOR
 
