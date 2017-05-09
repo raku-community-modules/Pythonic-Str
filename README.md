@@ -22,7 +22,8 @@ indexing operation you normally can use on lists is supported.
 
 When multiple indices are given, the result will be a single string
 **if all the elements** are of type `Str` or `Nil` (excluding `Failures`).
-Any other type of the output is returned as if it were called on a list
+Any other type of the output (which is what you'd usually get when using most
+adverbs) is returned as if it were called on a list
 of individual characters that compose the given string.
 
 # LIMITATIONS
