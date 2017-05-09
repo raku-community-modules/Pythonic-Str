@@ -38,8 +38,8 @@ them as lists of characters—simply call
 
 # SEE ALSO
 
-- [`LWP::Simple`](https://modules.perl6.org/repo/LWP::Simple)
-- [`HTTP::UserAgent`](https://modules.perl6.org/repo/HTTP::UserAgent)
+- [`Str.comb`](https://docs.perl6.org/routine/comb)
+- [`Str.substr`](https://docs.perl6.org/routine/substr)
 
 ----
 
