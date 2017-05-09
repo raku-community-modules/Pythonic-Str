@@ -3,7 +3,7 @@ use lib <lib ../lib>;
 
 use Pythonic::Str;
 
-say 'foobar'[3];            # b
-say 'foobar'[3..*];         # bar
-say 'foobar'[^3];           # foo
-say 'foobar'[3,5,6]:exists; # (True True False)
+say 'foobar'[3];    # b
+say 'foobar'[3..*]; # bar
+say 'foobar'[^3];   # foo
+say 'IP y♥t hPoenr l♥ ♥6 '[^∞ .grep: * %% 2]; # I ♥ Perl 6
