@@ -3,7 +3,7 @@
     "name"         : "Pythonic::Str",
     "license"      : "Artistic-2.0",
     "version"      : "1.001001",
-    "description"  : "Index into strings like Pythonists do!",
+    "description"  : "Index into strings like Pythonistas do!",
     "tags"         : [ "Python" ],
     "depends"      : [ ],
     "test-depends" : [
@@ -14,5 +14,5 @@
         "Pythonic::Str" : "lib/Pythonic/Str.pm6"
     },
     "authors"       : ["Zoffix Znet"],
-    "support"       : {"source"   : "git://github.com/zoffixznet/perl6-Pythonic-Str.git"}
+    "support"       : {"source"   : "git://github.com/raku-community-modules/Pythonic-Str.git"}
 }
