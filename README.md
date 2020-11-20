@@ -2,11 +2,11 @@
 
 # NAME
 
-Pythonic::Str - Index into strings like Pythonists do!
+Pythonic::Str - Index into strings like Pythonistas do!
 
 # SYNOPSIS
 
-```perl6
+```raku
     use Pythonic::Str;
 
     say 'foobar'[3];            # b
@@ -29,7 +29,7 @@ of individual characters that compose the given string.
 In plainer language this means that you get a single string result for stuff
 like:
 
-```perl6
+```raku
     say 'foobar'[^3];           # foo
     say 'foobar'[0, 1, 2];      # foo
     say 'foobar'[0, (1, (2,))]; # foo
@@ -38,7 +38,7 @@ like:
 ... but will get the same result as if you called indexing on a list of
 characters for stuff like:
 
-```perl6
+```raku
     say 'foobar'[^3]:p;           # (0 => f 1 => o 2 => o)
     say 'foobar'[0, 1, 2]:exists; # (True True True)
     say WHAT 'foobar'[1]:delete;  # (Failure)
@@ -52,24 +52,24 @@ non-core code due to inherent assumptions that `Str` type does not do
 those roles. What this means in plain English is you can only index your
 strings with `[...]` postcircumfix operator and can't willy-nilly treat
 them as lists of characters—simply call
-[`.comb`](https://docs.perl6.org/routine/comb) if you need that.
+[`.comb`](https://docs.raku.org/routine/comb) if you need that.
 
 # SEE ALSO
 
-- [`Str.comb`](https://docs.perl6.org/routine/comb)
-- [`Str.substr`](https://docs.perl6.org/routine/substr)
+- [`Str.comb`](https://docs.raku.org/routine/comb)
+- [`Str.substr`](https://docs.raku.org/routine/substr)
 
 ----
 
 #### REPOSITORY
 
 Fork this module on GitHub:
-https://github.com/zoffixznet/perl6-Pythonic-Str
+https://github.com/raku-community-modules/Pythonic-Str
 
 #### BUGS
 
 To report bugs or request features, please use
-https://github.com/zoffixznet/perl6-Pythonic-Str/issues
+https://github.com/raku-community-modules/Pythonic-Str/issues
 
 #### AUTHOR
 
