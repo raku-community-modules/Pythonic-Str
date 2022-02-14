@@ -1,5 +1,5 @@
 {
-  "auth": "zef|raku-community-modules",
+  "auth": "zef:raku-community-modules",
   "authors": [
     "Zoffix Znet"
   ],
