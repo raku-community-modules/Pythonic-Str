@@ -1,1 +1,2 @@
-lib/.precomp
+.precomp/
+/Pythonic-Str-*

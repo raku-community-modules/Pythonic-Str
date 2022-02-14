@@ -1,0 +1,6 @@
+Revision history for Pythonic-Ztr
+
+{{$NEXT}}
+    - First version in the ze ecosystem
+    - Removed superfluous "is export" tags
+    - Made lookup of postcircumfix[] occur only once

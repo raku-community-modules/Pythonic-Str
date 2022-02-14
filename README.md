@@ -1,85 +1,68 @@
-[![Build Status](https://travis-ci.org/zoffixznet/perl6-Pythonic-Str.svg)](https://travis-ci.org/zoffixznet/perl6-Pythonic-Str)
+[![Actions Status](https://github.com/raku-community-modules/Pythonic-Str/workflows/test/badge.svg)](https://github.com/raku-community-modules/Pythonic-Str/actions)
 
-# NAME
+NAME
+====
 
 Pythonic::Str - Index into strings like Pythonistas do!
 
-# SYNOPSIS
+SYNOPSIS
+========
 
 ```raku
-    use Pythonic::Str;
+use Pythonic::Str;
 
-    say 'foobar'[3];            # b
-    say 'foobar'[3..*];         # bar
-    say 'foobar'[^3];           # foo
-    say 'foobar'[3,5,6]:exists; # (True True False)
+say 'foobar'[3];            # b
+say 'foobar'[3..*];         # bar
+say 'foobar'[^3];           # foo
+say 'foobar'[3,5,6]:exists; # (True True False)
 ```
 
-# DESCRIPTION
+DESCRIPTION
+===========
 
-Provides `&postcircumfix:<[ ]>` candidates to index into strings. Any
-indexing operation you normally can use on lists is supported.
+Provides `&postcircumfix:<[ ]>` candidates to index into strings. Any indexing operation you normally can use on lists is supported.
 
-When multiple indices are given, the result will be calculated as if the
-indexing were called on a list of individual characters that compose the given
-string. **If all the elements** nodally are of type `Str` or `Nil` (excluding `Failures`), then the result will be joined together to form a single string.
-Any other type of the output is returned as if it were called on a list
-of individual characters that compose the given string.
+When multiple indices are given, the result will be calculated as if the indexing were called on a list of individual characters that compose the given string. **If all the elements** nodally are of type `Str` or `Nil` (excluding `Failure`s), then the result will be joined together to form a single string. Any other type of the output is returned as if it were called on a list of individual characters that compose the given string.
 
-In plainer language this means that you get a single string result for stuff
-like:
+In plainer language this means that you get a single string result for stuff like:
 
 ```raku
-    say 'foobar'[^3];           # foo
-    say 'foobar'[0, 1, 2];      # foo
-    say 'foobar'[0, (1, (2,))]; # foo
+say 'foobar'[^3];           # foo
+say 'foobar'[0, 1, 2];      # foo
+say 'foobar'[0, (1, (2,))]; # foo
 ```
 
-... but will get the same result as if you called indexing on a list of
-characters for stuff like:
+... but will get the same result as if you called indexing on a list of characters for stuff like:
 
 ```raku
-    say 'foobar'[^3]:p;           # (0 => f 1 => o 2 => o)
-    say 'foobar'[0, 1, 2]:exists; # (True True True)
-    say WHAT 'foobar'[1]:delete;  # (Failure)
+say 'foobar'[^3]:p;           # (0 => f 1 => o 2 => o)
+say 'foobar'[0, 1, 2]:exists; # (True True True)
+say WHAT 'foobar'[1]:delete;  # (Failure)
 ```
 
-# LIMITATIONS
+LIMITATIONS
+===========
 
-This module does not provide `Str.AT-POS` or make `Str` type do `Positional`
-or `Iterable` roles. The latter causes all sorts of fallout with core and
-non-core code due to inherent assumptions that `Str` type does not do
-those roles. What this means in plain English is you can only index your
-strings with `[...]` postcircumfix operator and can't willy-nilly treat
-them as lists of characters—simply call
-[`.comb`](https://docs.raku.org/routine/comb) if you need that.
+This module does not provide `Str.AT-POS` or make `Str` type do `Positional` or `Iterable` roles. The latter causes all sorts of fallout with core and non-core code due to inherent assumptions that `Str` type does not do those roles. What this means in plain English is you can only index your strings with `[...]` postcircumfix operator and can't willy-nilly treat them as lists of characters—simply. Call [`.comb`](https://docs.raku.org/routine/comb) if you need that.
 
-# SEE ALSO
+SEE ALSO
+========
 
-- [`Str.comb`](https://docs.raku.org/routine/comb)
-- [`Str.substr`](https://docs.raku.org/routine/substr)
+  * [`Str.comb`](https://docs.raku.org/routine/comb)
 
-----
+  * [`Str.substr`](https://docs.raku.org/routine/substr)
 
-#### REPOSITORY
+AUTHOR
+======
 
-Fork this module on GitHub:
-https://github.com/raku-community-modules/Pythonic-Str
+Zoffix Znet
 
-#### BUGS
+COPYRIGHT AND LICENSE
+=====================
 
-To report bugs or request features, please use
-https://github.com/raku-community-modules/Pythonic-Str/issues
+Copyright 2017 Zoffix Znet
 
-#### AUTHOR
+Copyright 2018 - 2022 Raku Community
 
-Zoffix Znet (http://perl6.party/)
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
-#### LICENSE
-
-You can use and distribute this module under the terms of the
-The Artistic License 2.0. See the `LICENSE` file included in this
-distribution for complete details.
-
-The `META6.json` file of this distribution may be distributed and modified
-without restrictions or attribution.

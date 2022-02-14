@@ -1,18 +1,33 @@
 {
-    "perl"         : "6.c",
-    "name"         : "Pythonic::Str",
-    "license"      : "Artistic-2.0",
-    "version"      : "1.001001",
-    "description"  : "Index into strings like Pythonistas do!",
-    "tags"         : [ "Python" ],
-    "depends"      : [ ],
-    "test-depends" : [
-        "Test",
-        "Test::META"
-    ],
-    "provides"     : {
-        "Pythonic::Str" : "lib/Pythonic/Str.pm6"
-    },
-    "authors"       : ["Zoffix Znet"],
-    "support"       : {"source"   : "git://github.com/raku-community-modules/Pythonic-Str.git"}
+  "auth": "zef|raku-community-modules",
+  "authors": [
+    "Zoffix Znet"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Index into strings like Pythonistas do!",
+  "license": "Artistic-2.0",
+  "name": "Pythonic::Str",
+  "perl": "6.c",
+  "provides": {
+    "Pythonic::Str": "lib/Pythonic/Str.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/Pythonic-Str.git",
+  "support": {
+    "source": "git://github.com/raku-community-modules/Pythonic-Str.git"
+  },
+  "tags": [
+    "PYTHON",
+    "COMB",
+    "LIST"
+  ],
+  "test-depends": [
+    "Test",
+    "Test::META"
+  ],
+  "version": "1.1"
 }
